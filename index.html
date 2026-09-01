@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+  <!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Shilin Tian | FPGA · Accelerators · EDA</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Shilin Tian" />
+<meta name="author" content="Shilin Tian" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Shilin Tian — Ph.D. in Computer Engineering (University of Central Florida, 2026). FPGA systems, accelerator RTL, and EDA for memory-efficient hardware/software co-design." />
+<meta name="twitter:description" property="og:description" content="Shilin Tian — Ph.D. in Computer Engineering (University of Central Florida, 2026). FPGA systems, accelerator RTL, and EDA for memory-efficient hardware/software co-design." />
+<link rel="canonical" href="https://shilinti.github.io/" />
+<meta property="og:url" content="https://shilinti.github.io/" />
+<meta property="og:site_name" content="Shilin Tian" />
+<meta property="og:image" content="https://shilinti.github.io/assets/img/og-card.png" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://shilinti.github.io/assets/img/og-card.png" />
+<meta name="twitter:title" content="Shilin Tian" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Shilin Tian"},"description":"Shilin Tian — Ph.D. in Computer Engineering (University of Central Florida, 2026). FPGA systems, accelerator RTL, and EDA for memory-efficient hardware/software co-design.","headline":"Shilin Tian","image":"https://shilinti.github.io/assets/img/og-card.png","name":"Shilin Tian","url":"https://shilinti.github.io/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Shilin Tian",
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Central Florida" },
+  "url": "https://shilinti.github.io",
+  "sameAs": [
+    "https://scholar.google.com/citations?user=xgYM_BkAAAAJ",
+    "https://orcid.org/0009-0002-6310-2787",
+    "https://www.linkedin.com/in/shilinti/"
+  ]
+}
+</script>
+
+  <link rel="icon" href="/favicon.ico?v=3" type="image/x-icon">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="#top">Shilin Tian</a>
+      <div class="nav-links" id="nav-links">
+        <a href="/#research">Research</a>
+        <a href="/#news">News</a>
+        <a href="/#publications">Publications</a>
+        <a href="/#awards">Awards</a>
+        <a href="/#service">Service</a>
+        <a href="#" class="cv-link">CV</a>
+        <span class="nav-ink" aria-hidden="true"></span>
+      </div>
+      <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">◐</button>
+    </nav>
+  </header>
+  <main><section class="hero" id="top">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1>I build accelerators — <em>and the tools that build them faster</em>.</h1>
+      <p class="role">Shilin Tian — Ph.D. in Computer Engineering, University of Central Florida (2026)</p>
+      <p class="bio">My research spans hardware/software co-design across the stack: memory-efficient
+        accelerators for AI vision (VITA) and population-scale genomics (PanGaea), and EDA tooling
+        (KAIROS) that predicts RTL timing without full synthesis — cutting iterative timing analysis
+        from days to minutes. I build FPGA data-acquisition systems for photonic computing
+        and biomedical imaging — sustained, real-time capture and processing.</p>
+      <div class="chips">
+        <span class="chip">FPGA Systems</span>
+        <span class="chip">Accelerator RTL</span>
+        <span class="chip">EDA &amp; Design Space Exploration</span>
+        <span class="chip">HW/SW Co-Design</span>
+        <span class="chip">Computer Architecture</span>
+      </div>
+      <p class="cta">I&rsquo;m open to research collaborations and currently seeking full-time job
+        opportunities in hardware and accelerator design, FPGA systems, and EDA.
+        If our interests overlap, <a href="mailto:shilin.tian0826@gmail.com">I&rsquo;d be glad to connect</a>.</p>
+      <div class="icons">
+        <a href="mailto:shilin.tian0826@gmail.com" aria-label="Email">Email</a>
+        <a href="https://scholar.google.com/citations?user=xgYM_BkAAAAJ" aria-label="Google Scholar">Scholar</a>
+        <a href="https://orcid.org/0009-0002-6310-2787" aria-label="ORCID">ORCID</a>
+        <a href="https://www.linkedin.com/in/shilinti/" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" class="cv-link" aria-label="Request CV">CV</a>
+      </div>
+    </div>
+    <img class="portrait" src="/assets/img/portrait.jpg"
+         alt="Shilin Tian at an academic conference" width="220" height="264">
+  </div>
+</section>
+
+<section id="research" class="section reveal">
+  <h2>Research Highlights</h2>
+  <div class="cards">
+    
+    <article class="card">
+      <h3>KAIROS — RTL-to-Gates Design Space Exploration</h3>
+      <p>An EDA framework that predicts post-synthesis timing directly from RTL, cutting iterative timing analysis from 28.6 hours to 11 minutes on CVA6 and from 4.4 days to 30 minutes on NVDLA.</p>
+      <p>
+        <span class="badge">Patent filed</span>
+        
+      </p>
+    </article>
+    
+    <article class="card">
+      <h3>Memory-Efficient Accelerators</h3>
+      <p>Hardware/software co-designed accelerators that attack data movement: VITA for 3D human-mesh recovery (DAC 2024), PanGaea for pangenome chaining and alignment (DAC 2026), and TensorPrism for sparse tensor algebra (ISCA 2026).</p>
+      <p>
+        
+        
+      </p>
+    </article>
+    
+    <article class="card">
+      <h3>FPGA Systems for Photonics & Imaging</h3>
+      <p>Custom FPGA platforms for photonics research: the control, training, and ADC-readout system for a floating-point accelerator computing in the optical domain, and an NIH-funded ultrafast deep-tissue imaging system with sustained 16+ Gb/s real-time capture.</p>
+      <p>
+        
+        
+      </p>
+    </article>
+    
+  </div>
+</section>
+
+<section id="news" class="section reveal">
+  <h2>News</h2>
+  <ul class="news">
+    
+    <li><span class="date">Aug 2026</span><span>Received my <strong>Ph.D. in Computer Engineering</strong> from the University of Central Florida.</span></li>
+    
+    <li><span class="date">Jul 2026</span><span><strong>KAIROS</strong> accepted to appear at <strong>MICRO 2026</strong>, Athens, Greece.</span></li>
+    
+    <li><span class="date">May 2026</span><span>Awarded the <strong>Dean’s Dissertation Fellowship</strong>, UCF.</span></li>
+    
+    <li><span class="date">Mar 2026</span><span><strong>TensorPrism</strong> accepted to <strong>ISCA 2026</strong>, Raleigh, NC.</span></li>
+    
+    <li><span class="date">Mar 2026</span><span><strong>PanGaea</strong> accepted to <strong>DAC 2026</strong>, Long Beach, CA.</span></li>
+    
+    <li><span class="date">Feb 2026</span><span>Started building the FPGA readout system for an <strong>NIH-funded</strong> ultrafast deep-tissue imaging system.</span></li>
+    
+    <li><span class="date">Dec 2025</span><span>Started building the FPGA control, training, and ADC-readout system for a <strong>photonic floating-point accelerator</strong>.</span></li>
+    
+    <li><span class="date">Jul 2025</span><span><strong>Rethinking Tiling</strong> (SpMM acceleration) accepted to <strong>MICRO 2025</strong>, Seoul, South Korea.</span></li>
+    
+    <li><span class="date">Feb 2024</span><span><strong>VITA</strong> accepted to <strong>DAC 2024</strong>, San Francisco, CA.</span></li>
+    
+    <li><span class="date">Aug 2023</span><span><strong>Polyform</strong> accepted to <strong>ICCD 2023</strong>, Washington, DC.</span></li>
+    
+    <li><span class="date">Aug 2022</span><span>Awarded the <strong>ORCGS Doctoral Fellowship</strong>, UCF.</span></li>
+    
+  </ul>
+</section>
+
+<section id="publications" class="section reveal">
+  <h2>Publications</h2>
+  
+  <article class="pub">
+    
+    <img class="pub-thumb" src="/assets/img/pubs/kairos.png" alt="" loading="lazy" width="180" height="120">
+    
+    <div class="pub-body">
+      <h3>KAIROS: Fast Microarchitectural Design Space Exploration by Bridging Architectural Semantics and Logic Gates</h3>
+      <p class="authors"><strong>Shilin Tian</strong>, Sanjay Gandham, Lingxiang Yin, Mingjie Lin, Hao Zheng</p>
+      <p class="meta">
+        <span class="venue">MICRO 2026</span>
+        <span class="badge">Top-Tier</span>
+        <span class="badge">To appear</span>
+      </p>
+      <p class="pub-links">
+        <a href="#">[PDF]</a>
+        
+        
+        
+      </p>
+    </div>
+  </article>
+  
+  <article class="pub">
+    
+    <img class="pub-thumb" src="/assets/img/pubs/pangaea.png" alt="" loading="lazy" width="180" height="120">
+    
+    <div class="pub-body">
+      <h3>PanGaea: A Unified Memory-Efficient Accelerator for Pangenome Chaining and Alignment</h3>
+      <p class="authors"><strong>Shilin Tian</strong>, Fangzhou Ye, Amir Ghazizadeh Ahsaei, Wei Zhang, Hao Zheng</p>
+      <p class="meta">
+        <span class="venue">DAC 2026</span>
+        <span class="badge">Top-Tier</span>
+        
+      </p>
+      <p class="pub-links">
+        <a href="https://drive.google.com/file/d/13F7T-wPNmtoNrcgJptfy5Bgsg0bkeebS/view?usp=share_link">[PDF]</a>
+        
+        
+        
+      </p>
+    </div>
+  </article>
+  
+  <article class="pub">
+    
+    <img class="pub-thumb" src="/assets/img/pubs/tensorprism.png" alt="" loading="lazy" width="180" height="120">
+    
+    <div class="pub-body">
+      <h3>TensorPrism: Rethinking Sparse High-order Tensor Acceleration via Co-occurrence Graph</h3>
+      <p class="authors">Fangzhou Ye, <strong>Shilin Tian</strong>, Amir Ghazizadeh Ahsaei, Hao Zheng</p>
+      <p class="meta">
+        <span class="venue">ISCA 2026</span>
+        <span class="badge">Top-Tier</span>
+        
+      </p>
+      <p class="pub-links">
+        <a href="https://ieeexplore.ieee.org/abstract/document/11617911">[PDF]</a>
+        
+        
+        
+      </p>
+    </div>
+  </article>
+  
+  <article class="pub">
+    
+    <img class="pub-thumb" src="/assets/img/pubs/rethinking-tiling.png" alt="" loading="lazy" width="180" height="120">
+    
+    <div class="pub-body">
+      <h3>Rethinking Tiling and Dataflow for SpMM Acceleration: A Graph Transformation Framework</h3>
+      <p class="authors">Amir Ghazizadeh Ahsaei, Lingxiang Yin, <strong>Shilin Tian</strong>, Fangzhou Ye, Fan Yao, Hao Zheng</p>
+      <p class="meta">
+        <span class="venue">MICRO 2025</span>
+        <span class="badge">Top-Tier</span>
+        
+      </p>
+      <p class="pub-links">
+        <a href="https://dl.acm.org/doi/full/10.1145/3725843.3756128">[PDF]</a>
+        
+        
+        
+      </p>
+    </div>
+  </article>
+  
+  <article class="pub">
+    
+    <img class="pub-thumb" src="/assets/img/pubs/vita.png" alt="" loading="lazy" width="180" height="120">
+    
+    <div class="pub-body">
+      <h3>VITA: ViT Acceleration for Efficient 3D Human Mesh Recovery via Hardware-Algorithm Co-Design</h3>
+      <p class="authors"><strong>Shilin Tian</strong>, Chase Szafranski, Ce Zheng, Fan Yao, Ahmed Louri, Chen Chen, Hao Zheng</p>
+      <p class="meta">
+        <span class="venue">DAC 2024</span>
+        <span class="badge">Top-Tier</span>
+        
+      </p>
+      <p class="pub-links">
+        <a href="https://dl.acm.org/doi/10.1145/3649329.3656518">[PDF]</a>
+        <a href="https://github.com/UCF-iCAT-lab/VITA">[Code]</a>
+        <a href="https://shilinti.github.io/vita-demo/">[Website]</a>
+        
+      </p>
+    </div>
+  </article>
+  
+  <article class="pub">
+    
+    <img class="pub-thumb" src="/assets/img/pubs/polyform.png" alt="" loading="lazy" width="180" height="120">
+    
+    <div class="pub-body">
+      <h3>Polyform: A Versatile Architecture for Multi-DNN Execution via Spatial and Temporal Acceleration</h3>
+      <p class="authors">Lingxiang Yin, Amir Ghazizadeh, <strong>Shilin Tian</strong>, Ahmed Louri, Hao Zheng</p>
+      <p class="meta">
+        <span class="venue">ICCD 2023</span>
+        
+        
+      </p>
+      <p class="pub-links">
+        <a href="https://ieeexplore.ieee.org/abstract/document/10361024">[PDF]</a>
+        
+        
+        
+      </p>
+    </div>
+  </article>
+  
+</section>
+
+<section id="awards" class="section reveal">
+  <h2>Awards &amp; Honors</h2>
+  <ul class="awards">
+    
+    <li><span class="year">2026</span><span>Dean’s Dissertation Fellowship · University of Central Florida</span></li>
+    
+    <li><span class="year">2024</span><span>Conference Travel Grant · 32nd IEEE FCCM</span></li>
+    
+    <li><span class="year">2022</span><span>ORCGS Doctoral Fellowship · University of Central Florida</span></li>
+    
+  </ul>
+</section>
+
+<section id="service" class="section reveal">
+  <h2>Teaching &amp; Service</h2>
+  
+  <div class="teach">
+    <p class="teach-head"><strong>Graduate Teaching Assistant & Grader</strong> · University of Central Florida <span class="muted">(May 2023 – Aug 2026)</span></p>
+    <p class="teach-detail muted">EGN3211 Engineering Analysis & Computation · EEL3004 Linear Circuits I · EEL3123C Linear Circuits II · EEL4346C Hardware Security & Trusted Circuit Design · EEL4781 Computer Communication Networks</p>
+  </div>
+  
+  <ul class="svc">
+    
+    <li><span class="svc-label">Conference Reviewer</span><span>DAC (2024–2026) · ICCAD (2024–2026) · ISPASS (2025–2026) · IPDPS (2024) · MLSys (2026) · ICS (2026)</span></li>
+    
+    <li><span class="svc-label">Journal Reviewer</span><span>IEEE TC · IEEE TCAD · IEEE TCAS-I · IEEE TSUSC · Future Generation Computer Systems · Computing (Springer Nature)</span></li>
+    
+    <li><span class="svc-label">Artifact Evaluation</span><span>MICRO 2026 Artifact Evaluation Committee</span></li>
+    
+    <li><span class="svc-label">Outreach</span><span>Project Lead, Camp Connected Advanced Summer Camp, UCF (2023, 2024) — one-week FPGA computer-vision and ML-security projects with high-school students</span></li>
+    
+    <li><span class="svc-label">Volunteering</span><span>ISCA 2023 (Orlando) · IPDPS 2023</span></li>
+    
+  </ul>
+</section>
+</main>
+  <footer class="footer">
+    <div class="footer-info">
+      <p><a href="mailto:shilin.tian0826@gmail.com">shilin.tian0826@gmail.com</a></p>
+      <p class="muted">Last updated Sep 2026 · No cookies.</p>
+    </div>
+    <div class="visitor-map">
+      <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=242c44&w=200&t=n&d=voYTLp5oXHYNLI603mbugGViw53bM5Qs2dPPq15rNXA&co=e3e7ec&cmo=2dd4bf&cmn=fbbf24&ct=0f1420'></script>
+    </div>
+  </footer>
+  <div class="modal-backdrop" id="cv-modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="cv-modal-title">
+      <h3 id="cv-modal-title">Curriculum Vitae</h3>
+      <p>I keep my CV current and tailored to each opportunity, so I share it directly rather than
+        posting a copy online. Email me and I&rsquo;ll gladly send you the latest version.</p>
+      <p class="modal-actions">
+        <a class="btn" href="mailto:shilin.tian0826@gmail.com?subject=CV%20request">Request CV by email</a>
+        <button type="button" id="cv-close">Close</button>
+      </p>
+    </div>
+  </div>
+  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/hero-canvas.js" defer></script>
+</body>
+</html>

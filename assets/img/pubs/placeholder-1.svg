@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="120" viewBox="0 0 180 120">
+  <rect width="180" height="120" rx="8" fill="#0d9488" opacity="0.15"/>
+  <circle cx="40" cy="80" r="4" fill="#0d9488"/><circle cx="75" cy="55" r="4" fill="#0d9488"/>
+  <circle cx="115" cy="42" r="4" fill="#0d9488"/><circle cx="150" cy="36" r="4" fill="#0d9488"/>
+  <path d="M25 100 Q 90 30 165 26" stroke="#0d9488" fill="none" stroke-width="2" opacity="0.5"/>
+  <text x="90" y="112" font-family="Helvetica, Arial" font-size="9" fill="#0d9488" text-anchor="middle">FIGURE PLACEHOLDER</text>
+</svg>
